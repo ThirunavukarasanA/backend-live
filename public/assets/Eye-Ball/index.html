@@ -1,0 +1,102 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100wh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.eyes {
+  position: absolute;
+  top: 27.5%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+.eye {
+  width: 125px;
+  height: 118px;
+  /*background: #DFE7C2;*/
+  background: linear-gradient(to bottom,#DFE7C2 10%,#fbfcf8 50%);
+  left: -3px;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.ball {
+  width: 80px;
+  height: 80px;
+  /*background: #000;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+@media screen and (max-width:1024px) and (min-width:320px) {
+  .eyes {
+  position: absolute;
+  top: 24.5%;
+  text-align: center;
+}
+}
+/*@media (max-width:500px){
+  .eyes{
+    top: 25.5%;
+  }
+}*/
+@keyframes example{
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: rgb(10, 235, 235);}
+  75%  {background-color: rgb(62, 223, 48);}
+  100% {background-color: rgb(216, 10, 243);}
+}
+
+    </style>
+</head>
+
+<body>
+  <img style="position:relative; left: 0px;" src="./New folder/min2.png" height="500px">
+    <div class="eyes">
+        <div class="eye">
+            <div class="ball">
+              <img src="./New folder/e.png" height="75px">
+            </div>
+        </div>
+    </div>
+    <audio style="position: absolute; bottom: 20px;" controls autoplay src="./music/ALVIN-PRODUCTION-R-DJ-Alvin-Bla-Bla-Revolution.mp3"></audio>
+</body>
+<script>
+    const balls = document.getElementsByClassName('ball');
+
+document.onmousemove = (event) => {
+  const x = (event.clientX * 100) / window.innerWidth + '%';
+  const y = (event.clientY * 100) / window.innerHeight + '%';
+  //console.log(x);
+  //console.log(y);
+for (let i = 0; i < balls.length; i++){
+  balls[i].style.left = x;
+  balls[i].style.top = y;
+  balls[i].transform = 'translate(-' + x + ',-' + y + ')';
+}
+};
+
+</script>
+
+</html>
