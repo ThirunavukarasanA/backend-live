@@ -260,13 +260,13 @@
 /** 
  * Contact 
  */ 
-document.getElementById('mybutton').onclick = function(){
-  var mytext = document.getElementById('name').value;
-  var mail = document.getElementById('email').value;
-  var sub = document.getElementById('subject').value;
-  var msg = document.getElementById('message').value;
-  console.log("Name: ",mytext)
-  console.log("Mail: ",mail)
-  console.log("Subject: ",sub)
-  console.log("Message: ",msg)
-}
+// document.getElementById('mybutton').onclick = function(){
+//   var mytext = document.getElementById('name').value;
+//   var mail = document.getElementById('email').value;
+//   var sub = document.getElementById('subject').value;
+//   var msg = document.getElementById('message').value;
+//   console.log("Name: ",mytext)
+//   console.log("Mail: ",mail)
+//   console.log("Subject: ",sub)
+//   console.log("Message: ",msg)
+// }
